@@ -1,22 +1,28 @@
-/* animações */
-
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 
+/* ===========================
+======== ANIMAÇÕES ===========
+============================*/
+
 /* floating */
+
 .floating {  
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes floating {
-  from { transform: translate(0,  0px); }
-  65%  { transform: translate(0, 10px); }
-  to   { transform: translate(0, -0px); }    
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
 }
 
-/* CFG GERAL */
+/* ============================
+========== DESIGN ============= 
+============================ */
 
 * {
     margin: 0;
@@ -40,7 +46,9 @@ body {
     overflow-y: auto;
 }
 
-/* HEADER */
+/* ============================
+========== HEADER ============= 
+============================ */
 
 header {
     position: sticky;
@@ -76,15 +84,19 @@ ul li:hover {
     
 }
 
-.parallax {
+.parallax, .parallax-body , .parallax-body2 {
     width: 100vw;
     height: 90vh;
     /*padding-top: 20vh;*/
     box-sizing: border-box;
     transform-style: preserve-3d;
     transition: background-image 0.2s ease-in-out;
-    
 }
+
+.parallax-body, .parallax-body2 {
+    height: 50vh;
+}
+
 .parallax::before {
     content:"";
     width: 100vw;
@@ -100,23 +112,16 @@ ul li:hover {
     z-index: -1;
     transform:translateZ(-1px) scale(2);
 }
-.parallax-wrapper{
-    height: 90vh;
-    line-height: 90vh;
-    text-align: center;
-    font-family: 'Archivo Black', sans-serif; 
-    font-size: 150px;
-    margin: auto;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-}
 
 span {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
     margin-top: 26vh;
+}
+
+.body-p {
+    margin-top: 10vh;
 }
 
 .triangulo-cima {
@@ -128,7 +133,9 @@ span {
     position: relative;
 }
 
-/* corpo */
+/* ===========================
+=========== CORPO ============ 
+============================ */
 
 .triangulo-baixo {
     width: 0;
@@ -140,7 +147,7 @@ span {
 }
 
 .cropo {
-    padding: 100px 61px;
+    padding: 75px 61px;
     background-color: white;
     color: black;
     z-index: 2;
@@ -148,12 +155,12 @@ span {
 }
 
 .conteudo, .conteudod {
-    max-width: 1050px;
+    max-width: 1080px;
     margin: auto;
 }
 
 p {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .colar {
@@ -166,11 +173,66 @@ p {
     padding-top: 102px;
 }
 
-/* jobs */
+/* ============================
+=========== jobs ============== 
+============================ */
+
+
+.parallax-body::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url(../img/bg3.jpg);
+    opacity: .8;
+    transition: background-image 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+}
+
+.parallax-body2::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url(../img/bg2.jpg);
+    opacity: 1;
+    transition: background-image 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+}
+
+.parallax-wrapper, .parallax-wrapper-body {
+    height: 90vh;
+    line-height: 90vh;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif; 
+    font-size: 150px;
+    margin: auto;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.parallax-wrapper-body {
+    height: 5vh;
+    line-height: 5vh;
+    -webkit-text-stroke-width: 2px;
+}
 
 .banner {
     width: 100%;
-    height: 95vh;
+    height: 50vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -180,6 +242,7 @@ p {
     z-index: 0;
     position: relative;
     background: black;
+    color: white;
 }
 
 .banner video {
@@ -190,12 +253,14 @@ p {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    opacity: 0.9;
+    opacity: .8;
     z-index: -1;
     filter: blur(1px);
 }
 
-/* footer */
+/* ===========================
+========== footer ============ 
+============================ */
 
 footer {
     padding: 25px 61px;
