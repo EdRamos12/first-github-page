@@ -1,72 +1,144 @@
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Totalmente Não Edu</title>
-    <link rel="stylesheet" href="css/style.css" /> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
     <!--<div id="triangulo-cima"></div>-->
-    <div class="parallax">
+    <div class="parallax" id="begin">
         <div class="parallax-wrapper floating">
-            <span>
+            <span class="fadeInTitle">  
                 <!--<img class="floating" src="img/me.png" alt="" width="20%" style="margin: 0">-->
                 EDU.
-                <h3 style="font-size: 26px; margin: 0; -webkit-text-stroke-width: 1.5px;">Programador, editor, 
-                e web designer.</h3>
+                <h3 style="font-size: 26px; margin: 0; -webkit-text-stroke-width: 1.5px;">
+                    Programador, editor, e web designer.
+                </h3>
             </span>
         </div>
     </div>
-    
-    <header id="top"></header>
+    <header id="top">
+        <ul>
+            <li class="white-bg"><a class="lkmenu" href="#sobremim">Perfil</a></li>
+            <li class="white-bg"><a class="lkmenu" href="#edicao">Habilidades</a></li>
+            <li><a href="#begin"><img src="img/b.png" alt="placeholder" height="100px" /></a></li>
+            <li class="white-bg"><a class="lkmenu" href="#">Projetos</a></li>
+            <li class="white-bg"><a class="lkmenu" href="#">Contato</a></li>
+        </ul>
+    </header>
     <!--<div class="triangulo-baixo"></div>-->
-    <div class="cropo">
-        <div class="conteudo">
-            <!--<img src="img/eu.jpg" alt="eu." height="90%" style="float:right">-->
-            <h1 style="text-align: center">Sobre mim</h1>
-            <p>Editor para Luigi da Web, ajudando com vídeos adicionais e extras, e também produzindo para meu próprio canal.</p>
-            <p>Anteriormente, agindo como Editor de vídeos freelancer, trabalhando em mínimos detalhes a favor do cliente e logo, para meu próprio canal. Também como programador, desenvolvendo, ajudando outros aprimorando códigos. E agora, aprendendo criação de websites.</p>
-            <p>Especialidades:
-                <br>Editor de vídeos;
-                <br>Programador (Visual Basic, Java, Lua, Python, Javascript);
-            <br>Web designer.</p>
+    <section>
+        <div id="sobremim" style="width: 100%; background: white;">
+            <div class="cropo">
+                <div class="fade">
+                    <!--<img src="img/eu.jpg" alt="eu." height="90%" style="float:right">-->
+                    <h1 style="text-align: center; margin-top: 50px;">Sobre mim</h1>
+                    <p>
+                        Editor para Luigi da Web, ajudando com vídeos adicionais e extras,
+                        e também produzindo para meu próprio canal desde 2013.
+                    </p>
+                    <p>
+                        Anteriormente, agindo como Editor de vídeos freelancer,
+                        trabalhando em mínimos detalhes a favor do cliente e logo, para
+                        meu próprio canal. Também como programador, desenvolvendo,
+                        ajudando outros aprimorando códigos. E agora, aprendendo criação
+                        de websites.
+                    </p>
+                    <p>
+                        Especialidades: <br />Editor de vídeos; <br />Programador (Visual
+                        Basic, Java, Lua, Python, Javascript); <br />Web designer.
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-    <!--<div class="banner">
-        <video autoplay muted loop><source src="vid/bg-final-2.mp4" type="video/mp4"></video>
-        <div class="conteudod">
-            <h1>Lorem ipsum</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, quae molestiae qui accusantium inventore dolorem nesciunt dolore doloribus adipisci repellendus.</p>
+        <div id="edicao">
+            <div class="banner">
+                <video autoplay muted loop>
+                    <source src="vid/intro.mp4" type="video/mp4" />
+                </video>
+                <!--<div class="conteudod">
+                        <h1>Lorem ipsum</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, quae molestiae qui accusantium inventore dolorem nesciunt dolore doloribus adipisci repellendus.</p>
+                    </div>-->
+                <div class="parallax-wrapper-body" style="font-style: italic;">
+                    Edição
+                </div>
+            </div>
+            <div class="cropo">
+                <p>
+                    Interessado por edição de vídeos desde 2011, produzo para o meu
+                    próprio canal mudando várias vezes o estilo de vídeo, como vídeo
+                    comentado, entretenimento e entre outros.
+                </p>
+                <p>
+                    Entrando com mais seriedade nesta área em 2014, fazendo alguns jobs
+                    para outros youtubers e criadores de conteúdo na plataforma, como
+                    Luigi da Web, SMG4 e entre outros. E depois, aprendendo mais efeitos
+                    mais realistas e animações minimalistas.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                    impedit id tenetur atque? Voluptatum molestiae incidunt aperiam
+                    error. Tempora blanditiis optio explicabo! Ea molestiae laborum, qui
+                    sit quam est repellat quisquam ipsa quos recusandae porro, quidem
+                    dolores explicabo enim voluptatibus expedita dignissimos, blanditiis
+                    fugiat commodi consequatur vel aperiam voluptate officia!
+                </p>
+            </div>
         </div>
-    </div>-->
-    <div class="parallax-body">
+        <div class="banner">
+            <video autoplay muted loop>
+                <source src="vid/nitg-bg.mp4" type="video/mp4" />
+            </video>
+            <div class="conteudod">
+                <h1>Lorem ipsum</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+                    quae molestiae qui accusantium inventore dolorem nesciunt dolore
+                    doloribus adipisci repellendus.
+                </p>
+            </div>
+        </div>
+        <!--<div class="parallax-body">
         <div class="parallax-wrapper-body" style="font-style: italic;">
             <span class="body-p">
                 Design
             </span>
         </div>
-    </div>
-    <div class="cropo">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe delectus doloremque necessitatibus hic culpa molestias? Debitis consequatur iste fuga.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi impedit id tenetur atque? Voluptatum molestiae incidunt aperiam error. Tempora blanditiis optio explicabo! Ea molestiae laborum, qui sit quam est repellat quisquam ipsa quos recusandae porro, quidem dolores explicabo enim voluptatibus expedita dignissimos, blanditiis fugiat commodi consequatur vel aperiam voluptate officia!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi impedit id tenetur atque? Voluptatum molestiae incidunt aperiam error. Tempora blanditiis optio explicabo! Ea molestiae laborum, qui sit quam est repellat quisquam ipsa quos recusandae porro, quidem dolores explicabo enim voluptatibus expedita dignissimos, blanditiis fugiat commodi consequatur vel aperiam voluptate officia!</p>
-    </div>
-    <div class="banner">
-        <video autoplay muted loop><source src="vid/intro.mp4" type="video/mp4"></video>
-        <!--<div class="conteudod">
-            <h1>Lorem ipsum</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, quae molestiae qui accusantium inventore dolorem nesciunt dolore doloribus adipisci repellendus.</p>
-        </div>-->
-        <div class="parallax-wrapper-body" style="font-style: italic;">
-            Edição
+    </div>-->
+        <div class="cropo">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe
+                delectus doloremque necessitatibus hic culpa molestias? Debitis
+                consequatur iste fuga.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                impedit id tenetur atque? Voluptatum molestiae incidunt aperiam error.
+                Tempora blanditiis optio explicabo! Ea molestiae laborum, qui sit quam
+                est repellat quisquam ipsa quos recusandae porro, quidem dolores
+                explicabo enim voluptatibus expedita dignissimos, blanditiis fugiat
+                commodi consequatur vel aperiam voluptate officia!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                impedit id tenetur atque? Voluptatum molestiae incidunt aperiam error.
+                Tempora blanditiis optio explicabo! Ea molestiae laborum, qui sit quam
+                est repellat quisquam ipsa quos recusandae porro, quidem dolores
+                explicabo enim voluptatibus expedita dignissimos, blanditiis fugiat
+                commodi consequatur vel aperiam voluptate officia!
+            </p>
         </div>
-    </div>
-    <div class="cropo">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe delectus doloremque necessitatibus hic culpa molestias? Debitis consequatur iste fuga.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi impedit id tenetur atque? Voluptatum molestiae incidunt aperiam error. Tempora blanditiis optio explicabo! Ea molestiae laborum, qui sit quam est repellat quisquam ipsa quos recusandae porro, quidem dolores explicabo enim voluptatibus expedita dignissimos, blanditiis fugiat commodi consequatur vel aperiam voluptate officia!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi impedit id tenetur atque? Voluptatum molestiae incidunt aperiam error. Tempora blanditiis optio explicabo! Ea molestiae laborum, qui sit quam est repellat quisquam ipsa quos recusandae porro, quidem dolores explicabo enim voluptatibus expedita dignissimos, blanditiis fugiat commodi consequatur vel aperiam voluptate officia!</p>
-    </div>
+        <!--<div class="triangulo-baixo"></div>-->
+    </section>
+
     <footer></footer>
-    <script src="js/master.js"></script>
+
+    <!-- scirpts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

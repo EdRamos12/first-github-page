@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');/*font principal*/
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black'); /*title*/
 
 /* ===========================
 ======== ANIMAÇÕES ===========
@@ -15,13 +15,44 @@
 }
 
 @keyframes floating {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 10px); }
-    to   { transform: translate(0, -0px); }    
+    from { transform: translate3d(0,  -10px, 0); }
+    65%  { transform: translate3d(0, 0px, 0); }
+    to   { transform: translate3d(0, -10px, 0); }    
 }
 
+.fadeInTitle {
+    animation: fadeInTitle;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+/* fade in titulo*/
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translate3d(0px, -50px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0);
+    }
+}
+
+.fade {
+    opacity: 0;
+    transform: translate3d(-100px,0,0);
+    transition: .2s;
+}
+
+.fade-begin {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+
 /* ============================
-========== DESIGN ============= 
+========== GERAL  ============= 
 ============================ */
 
 * {
@@ -30,8 +61,8 @@
 }
 
 html {
-    overflow: hidden;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 body {
@@ -42,6 +73,7 @@ body {
     height: 100vh;
     perspective: 1px;
     transform-style: preserve-3d;
+    overflow: hidden;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -52,9 +84,12 @@ body {
 
 header {
     position: sticky;
-    background-color: #1a0748;
+    /*background-color: #1a0748;*/
+    /*background-color: black;*/
+    background: #408048;
+    opacity: .99;
     text-align: center;
-    z-index: 3;
+    z-index: 100;
     top: 0;
     height: 100px;
 }
@@ -63,6 +98,7 @@ header ul, header ul li {
     list-style: none;
     display: inline-block;
     padding: 0 20px;
+    transition: background 0.1s linear;
 }
 
 header ul li {
@@ -81,16 +117,36 @@ ul:hover li {
 ul li:hover {
     opacity: 1;
     filter: blur(0px);
-    
+}
+
+.lkmenu {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color .3s;
+}
+
+.lkmenu:hover {
+    color: #134571;
+    transition: color .3s;
+}
+
+.white-bg:hover {
+    background: white;
+    transition: background .3s, color .3s;
+    color: #408048;
+}
+
+.white-bg:hover a {
+    color: #408048;
+    transition: color .3s;
 }
 
 .parallax, .parallax-body , .parallax-body2 {
     width: 100vw;
-    height: 90vh;
-    /*padding-top: 20vh;*/
+    height: 85vh;
+    /*padding-top: 20vh; menu*/
     box-sizing: border-box;
-    transform-style: preserve-3d;
-    transition: background-image 0.2s ease-in-out;
 }
 
 .parallax-body, .parallax-body2 {
@@ -103,34 +159,40 @@ ul li:hover {
     height: 100vh;
     top: 0;
     left: 0;
-    background-image: url(../img/bg.jpg);
+    background-image: url(../img/bg2.jpg);
     transition: background-image 0.2s ease-in-out;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     transform:translateZ(-1px) scale(2);
+}
+
+.parallax-wrapper, .parallax-wrapper-body {
+    height: 90vh;
+    line-height: 90vh;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif; 
+    font-size: 150px;
+    margin: auto;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
 
 span {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
-    margin-top: 26vh;
+    margin-top: 25vh;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(0, 0, 0, 0.5)
 }
 
 .body-p {
     margin-top: 10vh;
-}
-
-.triangulo-cima {
-    width: 0;
-    height: 1;
-    border-top: 40px solid #1a0748;
-    border-left: 100vw solid transparent;
-    z-index: 2;
-    position: relative;
 }
 
 /* ===========================
@@ -140,10 +202,19 @@ span {
 .triangulo-baixo {
     width: 0;
     height: 0;
-    border-bottom: 70px solid #1a0748;
+    border-top: 70px solid #fff000;
     border-right: 100vw solid transparent;
     z-index: 2;
-    position: relative;
+    position: absolute;
+}
+
+.triangulo-cima {
+    width: 0;
+    height: 0;
+    border-bottom: 70px solid #ff0000;
+    border-right: 100vw solid transparent;
+    z-index: 2;
+    position: absolute;
 }
 
 .cropo {
@@ -173,6 +244,10 @@ p {
     padding-top: 102px;
 }
 
+.hideme {
+    opacity: 1;
+}
+
 /* ============================
 =========== jobs ============== 
 ============================ */
@@ -185,23 +260,6 @@ p {
     top: 0;
     left: 0;
     background-image: url(../img/bg3.jpg);
-    opacity: .8;
-    transition: background-image 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    z-index: -1;
-    transform:translateZ(-1px) scale(2);
-}
-
-.parallax-body2::before {
-    content:"";
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-image: url(../img/bg2.jpg);
     opacity: 1;
     transition: background-image 0.2s ease-in-out;
     background-repeat: no-repeat;
@@ -210,18 +268,6 @@ p {
     position: absolute;
     z-index: -1;
     transform:translateZ(-1px) scale(2);
-}
-
-.parallax-wrapper, .parallax-wrapper-body {
-    height: 90vh;
-    line-height: 90vh;
-    text-align: center;
-    font-family: 'Archivo Black', sans-serif; 
-    font-size: 150px;
-    margin: auto;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
 }
 
 .parallax-wrapper-body {
