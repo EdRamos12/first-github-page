@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');/*font principal*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); /*font principal*/
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black'); /*title*/
 
 /* ===========================
-======== ANIMAÇÕES ===========
+======== animations ==========
 ============================*/
 
 /* floating */
@@ -15,18 +15,18 @@
 }
 
 @keyframes floating {
-    from { transform: translate3d(0,  -10px, 0); }
+    from { transform: translate3d(0, -20px, 0); }
     65%  { transform: translate3d(0, 0px, 0); }
-    to   { transform: translate3d(0, -10px, 0); }    
+    to   { transform: translate3d(0, -20px, 0); }    
 }
+
+/* fade in titulo*/
 
 .fadeInTitle {
     animation: fadeInTitle;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
 }
-
-/* fade in titulo*/
 
 @keyframes fadeInTitle {
     from {
@@ -42,7 +42,13 @@
 .fade {
     opacity: 0;
     transform: translate3d(-100px,0,0);
-    transition: .2s;
+    transition: .15s;
+}
+
+.fadeport {
+    opacity: 0;
+    transform: translate3d(0,50px,0);
+    transition: .15s;
 }
 
 .fade-begin {
@@ -52,7 +58,7 @@
 
 
 /* ============================
-========== GERAL  ============= 
+========= overall ============ 
 ============================ */
 
 * {
@@ -79,7 +85,7 @@ body {
 }
 
 /* ============================
-========== HEADER ============= 
+========== header ============= 
 ============================ */
 
 header {
@@ -91,17 +97,21 @@ header {
     text-align: center;
     z-index: 100;
     top: 0;
-    height: 100px;
+    width: 100vw;
+    height: 15vh;
+    font-size: 4vh;
 }
 
 header ul, header ul li {
     list-style: none;
     display: inline-block;
     padding: 0 20px;
+    height: 15vh;
     transition: background 0.1s linear;
 }
 
 header ul li {
+    margin: 0;
     display: table-cell;
     vertical-align: middle;
 }
@@ -142,15 +152,11 @@ ul li:hover {
     transition: color .3s;
 }
 
-.parallax, .parallax-body , .parallax-body2 {
+.parallax {
     width: 100vw;
     height: 85vh;
     /*padding-top: 20vh; menu*/
     box-sizing: border-box;
-}
-
-.parallax-body, .parallax-body2 {
-    height: 50vh;
 }
 
 .parallax::before {
@@ -169,19 +175,17 @@ ul li:hover {
     transform:translateZ(-1px) scale(2);
 }
 
-.parallax-wrapper, .parallax-wrapper-body {
-    height: 90vh;
-    line-height: 90vh;
+.parallax-wrapper {
+    height: 85vh;
+    line-height: 85vh;
     text-align: center;
     font-family: 'Archivo Black', sans-serif; 
-    font-size: 150px;
+    font-size: 13vw;
     margin: auto;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    
 }
 
-span {
+.text-wrapper-parallax {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
@@ -191,94 +195,40 @@ span {
     background-color: rgb(0, 0, 0, 0.5)
 }
 
-.body-p {
-    margin-top: 10vh;
-}
-
 /* ===========================
-=========== CORPO ============ 
+=========== body ============ 
 ============================ */
 
-.triangulo-baixo {
-    width: 0;
-    height: 0;
-    border-top: 70px solid #fff000;
-    border-right: 100vw solid transparent;
-    z-index: 2;
-    position: absolute;
-}
-
-.triangulo-cima {
-    width: 0;
-    height: 0;
-    border-bottom: 70px solid #ff0000;
-    border-right: 100vw solid transparent;
-    z-index: 2;
-    position: absolute;
-}
-
 .cropo {
-    padding: 75px 61px;
+    padding: 50px 61px 0 61px;
     background-color: white;
     color: black;
     z-index: 2;
     position: relative;
 }
 
-.conteudo, .conteudod {
-    max-width: 1080px;
-    margin: auto;
+.triangulo, .triangulo2, .triangulo3 {
+    width: 0;
+    height: 50px;
+    margin-left: -61px;
+    border-style: solid;
+    border-width: 100px 100vw 0 0;
+    border-color: white transparent transparent transparent;
+    filter: drop-shadow(0px 5px 2px rgba(0,0,0,.6));
+    z-index: 2;
 }
 
-p {
-    margin: 15px 0;
-}
+p {margin: 15px 0;}
 
-.colar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.colar + .cropo {
-    padding-top: 102px;
-}
-
-.hideme {
-    opacity: 1;
-}
+.body-p {margin-top: 10vh;}
 
 /* ============================
 =========== jobs ============== 
 ============================ */
 
-
-.parallax-body::before {
-    content:"";
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-image: url(../img/bg3.jpg);
-    opacity: 1;
-    transition: background-image 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    z-index: -1;
-    transform:translateZ(-1px) scale(2);
-}
-
-.parallax-wrapper-body {
-    height: 5vh;
-    line-height: 5vh;
-    -webkit-text-stroke-width: 2px;
-}
-
 .banner {
-    width: 100%;
-    height: 50vh;
+    width: 100.1%;
+    height: 20vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -304,6 +254,165 @@ p {
     filter: blur(1px);
 }
 
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .8;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+.habilidades {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+
+}
+
+#titleH {
+    text-align: center; 
+    margin: 35px 0;
+}
+
+.port-left, .port-right, .port-center {
+    height: auto;
+    width: 32%;
+    background: white;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
+    transition: transform .2s ease-in-out;
+    border-radius: 5px;
+    flex-flow: row wrap;
+}
+
+.port-left {float: left;}
+
+.port-right {float: right}
+
+.port-center {margin-left: 1.9%;}
+
+.port #links, .port #links a {
+    color: #408048;
+    text-decoration: none;
+    text-align: center;
+}
+
+.port #links a:hover {font-weight: bold;}
+
+.port:hover {transform: scale(1.05);}
+
+.desc {padding: 20px;}
+
+.triangulo2 {
+    border-width: 100px 100vw 0;
+    margin-top: 50px;
+    left: -10px;
+    position: relative;
+    filter: drop-shadow(0px 5px 2px rgba(0,0,0,.6));
+}
+
+/* ===========================
+========= contato ===========
+============================ */
+
+.parallax-noscroll {
+    background-image: url("../img/bg3.jpg");
+    height: auto;
+    margin: -150px -65px 0 -65px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0px);
+}
+
+.parallax-noscroll-wrapper {
+    height: auto;
+    background: #00000090;
+    text-align: center;
+    padding: 100px 0;
+}
+
+form {
+    width: 75vw;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 1.5vw;
+}
+
+form span {
+    color: red;
+    font-size: 1vw;
+}
+
+#form-name, #form-email, #form-message {
+    text-align: left;
+    float: left; 
+    width: 48%;
+}
+
+#form-email {float: right}
+
+#form-message {float: 0; width: 100%; margin-top: 20px;}
+
+input[type=text], input[type=email] {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    width: 100%;
+    transition: border .1s linear;
+    outline: none;
+    border: 2px solid #00000000;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+    outline: none;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=submit]:focus {border: 2px solid #555;}
+
+.form-error {background: #ff9b9b;}
+
+input[type=submit] {
+    background-color: #408048;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 40px;
+    outline: none;
+}  
+
+.triangulo3 {
+    transform: rotate(180deg);
+    margin-top: -150px;
+}
+
+.social-media {
+    height: 80px;
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+.social-media img {margin: 0 15px}
+
 /* ===========================
 ========== footer ============ 
 ============================ */
@@ -311,9 +420,45 @@ p {
 footer {
     padding: 25px 61px;
     height: 70px;
-    background: black;
+    background: #000000fa;
     color: white;
     z-index: 2;
     position: relative;
     text-align: center;
 }
+
+/* ===========================
+========= "mobile" =========== 
+============================ */
+
+@media only screen and (max-width: 800px) {
+    #titleH {margin: 1vh 0;}
+
+    header ul, header ul li {padding: 0 1vh;}
+
+    .banner {height: 100px;}
+
+    .port {
+        width: 100%; 
+        margin: 50px 0;
+    }
+
+    .triangulo2 {clear: both;}
+
+    #form-name, #form-email {width: 100%;}
+    
+    #form-email {margin-top: 20px;}
+
+    form {font-size: 2.5vw;}
+
+    @media only screen and (max-width: 600px) {
+        header {font-size: 2vh;}
+        @media only screen and (max-width: 400px) {
+            header {font-size: 1.5vh;}
+        }
+    }
+}
+
+/* ===========================
+=========== end ============= 
+============================ */
