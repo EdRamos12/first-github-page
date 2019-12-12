@@ -39,6 +39,19 @@
     }
 }
 
+/* typing */
+
+@keyframes typing {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* fade-in text/port */
+
 .fade {
     opacity: 0;
     transform: translate3d(-100px,0,0);
@@ -47,7 +60,7 @@
 
 .fadeport {
     opacity: 0;
-    transform: translate3d(0,50px,0);
+    transform: translate3d(0,25px,0);
     transition: .15s;
 }
 
@@ -56,6 +69,11 @@
     transform: translate3d(0,0,0);
 }
 
+/* black/white theme */
+
+.cropo, p, h1, .habilidades, .sobre-mim, .parallax-noscroll, .port, .black-theme, .black-theme img {
+    transition: background .4s ease, color .4s ease, filter .4s ease;
+}
 
 /* ============================
 ========= overall ============ 
@@ -107,7 +125,7 @@ header ul, header ul li {
     display: inline-block;
     padding: 0 20px;
     height: 15vh;
-    transition: background 0.1s linear;
+    transition: background 0.1s ease;
 }
 
 header ul li {
@@ -118,7 +136,7 @@ header ul li {
 
 ul:hover li {
     opacity: .5;
-    transition: filter 0.1s linear, opacity 0.1s linear;
+    transition: filter 0.1s ease, opacity 0.1s ease;
     transition-delay: 0.05s;
     filter: blur(1px);
 
@@ -160,7 +178,7 @@ ul li:hover {
 }
 
 .parallax::before {
-    content:"";
+    content:'';
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -195,6 +213,26 @@ ul li:hover {
     background-color: rgb(0, 0, 0, 0.5)
 }
 
+h3::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 50%;
+    background: white;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+h3::after {
+    content: '';
+    height: 4vh;
+    width: .5vw;
+    display: inline-block;
+    background: white;
+    animation: typing .4s ease infinite;
+    margin-top: 5px;
+}
+
 /* ===========================
 =========== body ============ 
 ============================ */
@@ -207,15 +245,45 @@ ul li:hover {
     position: relative;
 }
 
-.triangulo, .triangulo2, .triangulo3 {
+.black-theme {
+    text-align: center;
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: all .3s ease;
+    font-weight: bold;
+}
+
+.black-theme:hover {
+    transform: scale(1.1);
+}
+
+h1::after {
+    content:'';
+    margin: 10px auto 20px auto;
+    display: block;
+    width: 20%;
+    height: 4px;
+    background: currentColor;
+    border-radius: 10px;
+}
+
+.sobre-mim::after, .habilidades::after, .parallax-noscroll::after {
     width: 0;
-    height: 50px;
-    margin-left: -61px;
+    margin-left: -60px;
     border-style: solid;
     border-width: 100px 100vw 0 0;
-    border-color: white transparent transparent transparent;
+    border-color: currentColor transparent transparent transparent;
     filter: drop-shadow(0px 5px 2px rgba(0,0,0,.6));
     z-index: 2;
+}
+
+.sobre-mim::after {
+    display: block; 
+    margin-top: 20px;
+    content:'';
 }
 
 p {margin: 15px 0;}
@@ -272,7 +340,6 @@ p {margin: 15px 0;}
     width: 100%;
     height: auto;
     margin: 30px 0;
-
 }
 
 #titleH {
@@ -287,16 +354,18 @@ p {margin: 15px 0;}
     display: inline-block;
     vertical-align: middle;
     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
-    transition: transform .2s ease-in-out;
+    transition: transform .2s ease;
     border-radius: 5px;
     flex-flow: row wrap;
 }
 
-.port-left {float: left;}
+.port-left {float: left; margin-bottom: 50px}
 
 .port-right {float: right}
 
 .port-center {margin-left: 1.9%;}
+
+.port {color: black;}
 
 .port #links, .port #links a {
     color: #408048;
@@ -310,12 +379,14 @@ p {margin: 15px 0;}
 
 .desc {padding: 20px;}
 
-.triangulo2 {
+.habilidades::after {
+    display: block; 
     border-width: 100px 100vw 0;
-    margin-top: 50px;
+    margin-top: 100px;
     left: -10px;
     position: relative;
-    filter: drop-shadow(0px 5px 2px rgba(0,0,0,.6));
+    content:'';
+    clear: both;
 }
 
 /* ===========================
@@ -325,7 +396,7 @@ p {margin: 15px 0;}
 .parallax-noscroll {
     background-image: url("../img/bg3.jpg");
     height: auto;
-    margin: -150px -65px 0 -65px;
+    margin: -129px -65px 0 -65px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -338,6 +409,7 @@ p {margin: 15px 0;}
     background: #00000090;
     text-align: center;
     padding: 100px 0;
+    padding-bottom: 150px;
 }
 
 form {
@@ -367,7 +439,7 @@ input[type=text], input[type=email] {
     border-radius: 10px;
     padding: 12px 20px;
     width: 100%;
-    transition: border .1s linear;
+    transition: border .1s ease;
     outline: none;
     border: 2px solid #00000000;
 }
@@ -383,35 +455,50 @@ textarea {
     outline: none;
 }
 
-input[type=text]:focus, input[type=email]:focus, input[type=submit]:focus {border: 2px solid #555;}
-
 .form-error {background: #ff9b9b;}
 
-input[type=submit] {
+button[type=submit] {
+    margin-top: 40px;
+    cursor: pointer;
+    padding: 16px 32px;
+    height: 56px;
     background-color: #408048;
     border: none;
     color: white;
-    padding: 16px 32px;
-    font-size: 1.5vw;
+    font-size: 25px;
+    text-align: center;
     border-radius: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    margin-top: 40px;
-    outline: none;
-}  
+    transition: transform .5s ease;
+}
 
-.triangulo3 {
+button[type=submit]:hover {transform: scale(1.05);}
+
+input[type=text]:focus, input[type=email]:focus {border: 2px solid #555;}
+
+.parallax-noscroll::after {
+    content:'';
+    display: block;
+    margin-left: 0;
     transform: rotate(180deg);
-    margin-top: -150px;
+    margin-top: -98px;
 }
 
 .social-media {
-    height: 80px;
-    padding: 40px 0 20px 0;
+    height: 60px;
+    padding: 40px 0 40px 0;
     text-align: center;
 }
 
-.social-media img {margin: 0 15px}
+.social-media img {
+    margin: 0 15px;
+    transition: all .2s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.3);
+}
+
+
 
 /* ===========================
 ========== footer ============ 
@@ -438,24 +525,24 @@ footer {
 
     .banner {height: 100px;}
 
-    .port {
-        width: 100%; 
-        margin: 50px 0;
-    }
-
-    .triangulo2 {clear: both;}
+    .port {width: 100%; margin: 50px 0;}
 
     #form-name, #form-email {width: 100%;}
-    
+
     #form-email {margin-top: 20px;}
 
     form {font-size: 2.5vw;}
 
+    .social-media {height: 120px;}
+
+    header {font-size: 3.5vw; width: 100%;}
+
+    .habilidades::after {margin-top: 0;}
+
+    .parallax-wrapper {font-size: 13vh}
+    
     @media only screen and (max-width: 600px) {
-        header {font-size: 2vh;}
-        @media only screen and (max-width: 400px) {
-            header {font-size: 1.5vh;}
-        }
+        header {font-size: 3vw;} 
     }
 }
 

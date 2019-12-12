@@ -11,7 +11,6 @@
     <div class="parallax" id="begin">
         <div class="parallax-wrapper floating">
             <span class="text-wrapper-parallax fadeInTitle">
-                <!--<img class="floating" src="img/me.png" alt="" width="20%" style="margin: 0">-->
                 EDU.
                 <h3 style="font-size: 4vh; margin: 0;">
                     Programador, editor, e web designer.
@@ -23,138 +22,133 @@
         <ul>
             <li class="white-bg"><a class="lkmenu" href="#sobremim">Perfil</a></li>
             <li class="white-bg"><a class="lkmenu" href="#habilidades">Habilidades</a></li>
-            <li><a href="#begin"><img src="img/b.png" alt="placeholder" height="100%" /></a></li>
-            <li class="white-bg"><a class="lkmenu" href="#">Rede social</a></li>
+            <li style="padding: 0"><a href="#begin"><img src="img/b.png" alt="placeholder" height="100%" /></a></li>
             <li class="white-bg"><a class="lkmenu" href="#contato">Contato</a></li>
+            <li class="white-bg"><a class="lkmenu" href="#rede-social">Rede social</a></li>
         </ul>
     </header>
     <section>
-        <div style="width: 100%; background: white;" id="sobremim">
-            <div class="cropo">
-                <div class="sobre-mim fade">
-                    <!--<img src="img/eu.jpg" alt="eu." height="90%" style="float:right">-->
-                    <h1 style="text-align: center; margin-top: 50px;">Sobre mim</h1>
-                    <p>
-                        Editor freelancer, ajudando com vídeos adicionais e extras,
-                        e também produzindo para meu próprio canal desde 2013.
-                    </p>
-                    <p>
-                        Anteriormente, agindo como Editor de vídeos freelancer,
-                        trabalhando em mínimos detalhes a favor do cliente e logo, para
-                        meu próprio canal. Também como programador, desenvolvendo,
-                        ajudando outros aprimorando códigos. E agora, aprendendo criação
-                        de websites.
-                    </p>
-                    <p>
-                        Especialidades: <br>Editor de vídeos; <br>Programador (Visual
-                        Basic, Java, Lua, Python, Javascript); <br>Web designer.
-                    </p>
-                </div>
-                <div class="triangulo" id="habilidades"></div>
-                <div class="habilidades">
-                    <h1 id="titleH">Habilidades</h1>
-                    <div class="port-left port fadeport">
-                        <div class="banner">
-                            <h1 style="text-align: center; font-weight: bold;">Edição</h1>
-                            <video src="vid/intro.mp4" muted autoplay loop></video>
+        <div class="cropo">
+            <div class="black-theme" id="black-theme" onclick="blackify()">
+                <img src="img/sol-lua.png" class="sun-moon" width="75px" style="vertical-align:middle"> <span>Ligar tema escuro</span>
+            </div>
+            <div class="sobre-mim fade">
+                <!--<img src="img/eu.jpg" alt="eu." height="90%" style="float:right">-->
+                <h1 style="text-align: center; margin-top: 50px;" id="sobremim">Sobre mim</h1>
+                <p>
+                    Editor freelancer, ajudando com vídeos adicionais e extras,
+                    e também produzindo para meu próprio canal desde 2013.
+                </p>
+                <p>
+                    Anteriormente, agindo como Editor de vídeos freelancer,
+                    trabalhando em mínimos detalhes a favor do cliente e logo, para
+                    meu próprio canal. Também como programador, desenvolvendo,
+                    ajudando outros aprimorando códigos. E agora, aprendendo criação
+                    de websites.
+                </p>
+                <p>
+                    Especialidades: <br>Editor de vídeos; <br>Programador (Java, Lua, Javascript); <br>Web designer.
+                </p>
+            </div>
+            <div class="habilidades" id="habilidades">
+                <h1 id="titleH" class='fadeport'>Habilidades</h1>
+                <div class="port-left port fadeport">
+                    <div class="banner">
+                        <h1 style="text-align: center; font-weight: bold;">Edição</h1>
+                        <video src="vid/intro.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="desc">
+                        <div id="links">
+                            <a href="https://youtube.com/c/sirnotedu" target="_blank">Ver canal do youtube</a>
                         </div>
-                        <div class="desc">
-                            <div id="links">
-                                <a href="https://youtube.com/c/sirnotedu" target="_blank">Ver canal do youtube</a>
+                        <p>
+                            Interessado por edição de vídeos desde 2011, produzo para o meu
+                            próprio canal mudando várias vezes o estilo de vídeo, como vídeo
+                            comentado, entretenimento e entre outros.
+                        </p>
+                        <p>
+                            Entrando com mais seriedade nesta área em 2014, fazendo alguns jobs
+                            para outros youtubers e criadores de conteúdo na plataforma, como
+                            Luigi da Web, SMG4 e entre outros. E depois, aprendendo mais efeitos
+                            mais realistas e praticando na área do Motion Design.
+                        </p>
+                    </div>
+                </div>
+                <div class="port-center port fadeport">
+                    <div class="banner">
+                        <h1 style="text-align: center; font-weight: bold;">Programação</h1>
+                        <img src="img/teste2.jpg">
+                    </div>
+                    <div class="desc">
+                        <div id="links">
+                            <a href="https://youtube.com/c/sirnotedu" target="_blank">Ver canal do youtube.</a>
+                        </div>
+                        <p>
+                            Entusiasta na área da programação desde 2016, começando no Visual Basic, e aprendendo
+                            mais linguagens, como Java, Javascript, Python, e entre outras linguagens.
+                        </p>
+                        <p>
+                            Trabalhando com projetos em Lua na plataforma Roblox, em 2017, e em diante, desenvolvendo
+                            projetos pessoais, tais como bots pro Discord, e criando projetos pessoais em Java, para
+                            aprender mais sobre a linguagem e lógica de programação.
+                        </p>
+                    </div>
+                </div>
+                <div class="port-right port fadeport">
+                    <div class="banner">
+                        <h1 style="text-align: center; font-weight: bold;">Websites</h1>
+                        <img src="img/bg4.jpg">
+                    </div>
+                    <div class="desc">
+                        <div id="links">
+                            <a href="https://youtube.com/c/sirnotedu" target="_blank">Ver canal do youtube.</a>
+                        </div>
+                        <p>
+                            Entrando na área em 2019, aprendendo HTML5, CSS3 e JavaScript, começei a desenvolver
+                            websites para expor minhas habilidades em design e programação.
+                        </p>
+                        <p>
+                            Atualmente aprimorando e fazendo programas e projetos para outros, e também ajudando
+                            otimizando códigos, ideias e etc., já fazendo websites em expor minhas habilidades
+                            e produção textual.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-noscroll" id="contato">
+                <div class="parallax-noscroll-wrapper">
+                    <div class="cropo" style="background: #00000000; color: white; padding: 0;">
+                        <h1>Contato</h1>
+                        <form method="POST" onsubmit="return enviar()">
+                            <div id="form-name">
+                                Insira seu nome: <span id="ername"></span><br>
+                                <input type="text" name="name" id="fname" placeholder="Nome" required>
                             </div>
-                            <p>
-                                Interessado por edição de vídeos desde 2011, produzo para o meu
-                                próprio canal mudando várias vezes o estilo de vídeo, como vídeo
-                                comentado, entretenimento e entre outros.
-                            </p>
-                            <p>
-                                Entrando com mais seriedade nesta área em 2014, fazendo alguns jobs
-                                para outros youtubers e criadores de conteúdo na plataforma, como
-                                Luigi da Web, SMG4 e entre outros. E depois, aprendendo mais efeitos
-                                mais realistas e animações minimalistas.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="port-center port fadeport">
-                        <div class="banner">
-                            <h1 style="text-align: center; font-weight: bold;">Programação</h1>
-                            <img src="img/teste2.jpg">
-                        </div>
-                        <div class="desc">
-                            <div id="links">
-                                <a href="https://youtube.com/c/sirnotedu" target="_blank">Ver canal do youtube.</a>
+                            <div id="form-email">
+                                Insira seu e-mail: <span id="eremail"></span><br>
+                                <input type="email" name="email" id="femail" placeholder="E-mail" required>
                             </div>
-                            <p>
-                                Interessado por edição de vídeos desde 2011, produzo para o meu
-                                próprio canal mudando várias vezes o estilo de vídeo, como vídeo
-                                comentado, entretenimento e entre outros.
-                            </p>
-                            <p>
-                                Entrando com mais seriedade nesta área em 2014, fazendo alguns jobs
-                                para outros youtubers e criadores de conteúdo na plataforma, como
-                                Luigi da Web, SMG4 e entre outros. E depois, aprendendo mais efeitos
-                                mais realistas e animações minimalistas.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="port-right port fadeport">
-                        <div class="banner">
-                            <h1 style="text-align: center; font-weight: bold;">Websites</h1>
-                            <img src="img/bg4.jpg">
-                        </div>
-                        <div class="desc">
-                            <div id="links">
-                                <a href="https://youtube.com/c/sirnotedu" target="_blank">Ver canal do youtube.</a>
+                            <div id="form-message">
+                                Insira sua mensagem: <span id="ermsg"></span><br>
+                                <textarea name="message" id="fmsg" cols="30" rows="10" placeholder="Mensagem"
+                                    required></textarea>
                             </div>
-                            <p>
-                                Interessado por edição de vídeos desde 2011, produzo para o meu
-                                próprio canal mudando várias vezes o estilo de vídeo, como vídeo
-                                comentado, entretenimento e entre outros.
-                            </p>
-                            <p>
-                                Entrando com mais seriedade nesta área em 2014, fazendo alguns jobs
-                                para outros youtubers e criadores de conteúdo na plataforma, como
-                                Luigi da Web, SMG4 e entre outros. E depois, aprendendo mais efeitos
-                                mais realistas e animações minimalistas.
-                            </p>
-                        </div>
+                            <button type="submit"><i>Enviar!</i></button>
+                        </form>
                     </div>
                 </div>
-                <div class="triangulo2" id="contato"></div>
-                <div class="parallax-noscroll">
-                    <div class="parallax-noscroll-wrapper">
-                        <div class="cropo" style="background: #00000000; color: white; padding: 0;">
-                            <h1>Contato</h1>
-                            <form method="POST" onsubmit="return enviar()">
-                                <div id="form-name">
-                                    Insira seu nome: <span id="ername"></span><br> 
-                                    <input type="text" name="name" id="fname" placeholder="Nome" required>
-                                </div>
-                                <div id="form-email">
-                                    Insira seu e-mail: <span id="eremail"></span><br>
-                                    <input type="email" name="email" id="femail" placeholder="E-mail" required>
-                                </div>
-                                <div id="form-message">
-                                    Insira sua mensagem: <span id="ermsg"></span><br>
-                                    <textarea name="message" id="fmsg" cols="30" rows="10" placeholder="Mensagem" required></textarea>
-                                </div>
-                                <input type="submit" value="Enviar!">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="triangulo3"></div>
-                <div class="social-media">
-                    <a href="https://youtube.com/c/sirnotedu" target="_blank"><img src="img/yt.png" alt="youtube" height="60px"></a>
-                    <a href="https://twitter.com/sirnotedu" target="_blank"><img src="img/twitter.png" alt="twitter" height="60px"></a>
-                    <a href="https://twitch.tv/sirnotedu" target="_blank"><img src="img/twitch.png" alt="twitch" height="60px"></a>
-                </div>
+            </div>
+            <div class="social-media" id="rede-social">
+                <a href="https://youtube.com/c/sirnotedu" target="_blank"><img src="img/yt.png" alt="youtube"
+                        height="60px"></a>
+                <a href="https://twitter.com/sirnotedu" target="_blank"><img src="img/twitter.png" alt="twitter"
+                        height="60px"></a>
+                <a href="https://twitch.tv/sirnotedu" target="_blank"><img src="img/twitch.png" alt="twitch"
+                        height="60px"></a>
             </div>
         </div>
     </section>
-
     <footer></footer>
-
     <!-- scirpts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/master.js"></script>
