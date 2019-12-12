@@ -1,5 +1,4 @@
 /* =======================================
-<<<<<<< HEAD
 = carregar conteudo em todas as paginas  =
 =========================================*/
 
@@ -102,13 +101,10 @@ var subtitulo = document.querySelector("h3");
 Typer(subtitulo);
 
 /* =======================================
-=======
->>>>>>> 31398c1a57e4250e5193ab828e36a7eb57a75f36
 =                form js                =
 =========================================*/
 
 function enviar() {
-<<<<<<< HEAD
     var fname = document.getElementById("fname"), femail = document.getElementById("femail"), fmsg = document.getElementById("fmsg");
     var ername = document.getElementById("ername"), eremail = document.getElementById("eremail"), ermsg = document.getElementById("ermsg");
 
@@ -134,38 +130,6 @@ function enviar() {
     } else {
         ermsg.innerHTML = "(Contextualize sua mensagem)";
         fmsg.classList.add("form-error");
-=======
-    var fname = document.getElementById("fname").value, femail = document.getElementById("femail").value, fmsg = document.getElementById("fmsg").value;
-    var ername = document.getElementById("ername"), eremail = document.getElementById("eremail"), ermsg = document.getElementById("ermsg");
-
-    if (fname.length > 2) {
-        document.getElementById("fname").classList.remove("form-error");
-        ername.innerHTML = " ";
-    } else {
-        console.log(fname.length)
-        ername.innerHTML = "(Insira um nome valido)";
-        document.getElementById("fname").classList.add("form-error");
-        return false;
-    }
-    if (femail.length > 5 && femail.includes("@") && femail.includes(".")) {
-        eremail.innerHTML = " ";
-        document.getElementById("femail").classList.remove("form-error");
-    } else {
-        console.log(femail.length);
-        eremail.innerHTML = "(Insira um e-mail valido)";
-        document.getElementById("femail").classList.add("form-error");
-        return false;
-    }
-    if (fmsg.length >= 10) {
-        ermsg.innerHTML = " ";
-        document.getElementById("fmsg").classList.remove("form-error");
-    } else {
-        console.log(fmsg.length);
-        ermsg.innerHTML = "(Contextualize sua mensagem)";
-        document.getElementById("fmsg").classList.add("form-error");
->>>>>>> 31398c1a57e4250e5193ab828e36a7eb57a75f36
-        return false;
-    }
 }
 
 /* =======================================
@@ -186,39 +150,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 =             fade on scroll            =
 =========================================*/
 
-<<<<<<< HEAD
 var animationClass = 'fade-begin',
     offset = $(window).height() * 3 / 4,
     documentTop = $(document).scrollTop();
-=======
-(function () {
     
-    function fadeScroll() {
-        var $target = $('.fade'), animationClass = 'fade-begin', offset = $(window).height() * 3 / 4,  documentTop = $(document).scrollTop();
-        $target.each(function () {
-            var itemTop = $(this).offset().top;
-            if (documentTop > itemTop - offset) {
-                $(this).addClass(animationClass);
-            }
-        })
-    }
-    function fadeportScroll() {
-        var $target = $('.fadeport'), animationClass = 'fade-begin', offset = $(window).height() * 3 / 4, documentTop = $(document).scrollTop();
-        $target.each(function () {
-            var itemTop = $(this).offset().top;
-            if (documentTop > itemTop - offset) {
-                $(this).addClass(animationClass);
-            }
-        })
-    }
-    fadeScroll();
-    document.addEventListener('scroll', function (event) {
-        fadeScroll();
-        fadeportScroll();
-    }, true);
-}())
->>>>>>> 31398c1a57e4250e5193ab828e36a7eb57a75f36
-
 function fadeScroll() {
     let $target = $('.fade');
     $target.each(function () {
