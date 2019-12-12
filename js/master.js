@@ -130,6 +130,8 @@ function enviar() {
     } else {
         ermsg.innerHTML = "(Contextualize sua mensagem)";
         fmsg.classList.add("form-error");
+        return false;
+    }
 }
 
 /* =======================================
@@ -153,7 +155,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 var animationClass = 'fade-begin',
     offset = $(window).height() * 3 / 4,
     documentTop = $(document).scrollTop();
-    
+
 function fadeScroll() {
     let $target = $('.fade');
     $target.each(function () {
