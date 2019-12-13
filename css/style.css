@@ -529,7 +529,7 @@ input[type=text]:focus, input[type=email]:focus {border: 2px solid #555;}
 
 footer {
     padding: 25px 61px;
-    height: 70px;
+    min-height: auto;
     background: #000000fa;
     color: white;
     z-index: 2;
@@ -559,11 +559,13 @@ footer {
     .habilidades::after {margin-top: 0;}
 
     .parallax-wrapper {font-size: 13vh}
-
+	
+    header {opacity: 1}
+	
     header ul li {
         width: 100vw;
         line-height: 15vh;
-        background: #408048;
+        background: #397540;
         display:block;
         padding: 0;
         height: 0;
@@ -587,7 +589,10 @@ footer {
     }
     ul:hover li {
         filter: blur(0);
-        opacity: .95;
+        opacity: 1;
+    }
+    .social-media {
+        height: auto;
     }
 }
 
