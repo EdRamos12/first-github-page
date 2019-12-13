@@ -120,6 +120,8 @@ header {
     font-size: 4vh;
 }
 
+header ul {width: 100%}
+
 header ul, header ul li {
     list-style: none;
     display: inline-block;
