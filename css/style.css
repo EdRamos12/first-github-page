@@ -541,7 +541,7 @@ footer {
 ========= "mobile" =========== 
 ============================ */
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
     #titleH {margin: 1vh 0;}
 
     .banner {height: 100px;}
