@@ -50,12 +50,18 @@
     }
 }
 
+/* black/white theme */
+
+.cropo, p, h1, .habilidades, .sobre-mim, .parallax-noscroll, .port, .black-theme, .black-theme img {
+    transition: background .4s ease, color .4s ease, filter .4s ease;
+}
+
 /* fade-in text/port */
 
 .fade {
     opacity: 0;
-    transform: translate3d(-100px,0,0);
     transition: .15s;
+    transform: translate3d(-100px,0,0);
 }
 
 .fadeport {
@@ -67,12 +73,6 @@
 .fade-begin {
     opacity: 1;
     transform: translate3d(0,0,0);
-}
-
-/* black/white theme */
-
-.cropo, p, h1, .habilidades, .sobre-mim, .parallax-noscroll, .port, .black-theme, .black-theme img {
-    transition: background .4s ease, color .4s ease, filter .4s ease;
 }
 
 /* ============================
@@ -120,6 +120,11 @@ header {
     font-size: 4vh;
 }
 
+header ul {
+	width: auto;
+	margin: auto;
+}
+
 header ul, header ul li {
     list-style: none;
     display: inline-block;
@@ -139,7 +144,6 @@ ul:hover li {
     transition: filter 0.1s ease, opacity 0.1s ease;
     transition-delay: 0.05s;
     filter: blur(1px);
-
 }
 
 ul li:hover {
@@ -231,6 +235,25 @@ h3::after {
     background: white;
     animation: typing .4s ease infinite;
     margin-top: 5px;
+}
+
+#icon {
+    float: right; 
+    margin-right: 1.2vw;
+}
+
+label[for="bt_menu"] {
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: -2vh;
+    font-size: 10vh;
+    padding: 2vh;
+    padding-left: 2vw;
+    float: left;
+}
+
+#bt_menu, #icon, label[for="bt_menu"]{
+    display: none;
 }
 
 /* ===========================
@@ -521,8 +544,6 @@ footer {
 @media only screen and (max-width: 800px) {
     #titleH {margin: 1vh 0;}
 
-    header ul, header ul li {padding: 0 1vh;}
-
     .banner {height: 100px;}
 
     .port {width: 100%; margin: 50px 0;}
@@ -535,14 +556,38 @@ footer {
 
     .social-media {height: 120px;}
 
-    header {font-size: 3.5vw; width: 100%;}
-
     .habilidades::after {margin-top: 0;}
 
     .parallax-wrapper {font-size: 13vh}
-    
-    @media only screen and (max-width: 600px) {
-        header {font-size: 3vw;} 
+
+    header ul li {
+        width: 100vw;
+        line-height: 15vh;
+        background: #408048;
+        display:block;
+        padding: 0;
+        height: 0;
+        font-size: 0;
+        transition: height .3s ease, font-size .1s ease;;
+    }
+    header ul {
+        padding: 0;
+        margin-top: -.5vh;
+        height: 0;
+    }
+    #icon, label[for="bt_menu"]{
+        display: block;
+    }
+    #bt_menu:checked ~ ul li {
+        height: 15vh;
+        font-size: 5vw;
+    }
+    .menu-img {
+        display: none;
+    }
+    ul:hover li {
+        filter: blur(0);
+        opacity: .95;
     }
 }
 
