@@ -39,6 +39,12 @@
     }
 }
 
+/* black/white theme */
+
+.cropo, p, h1, .habilidades, .sobre-mim, .parallax-noscroll, .port, .black-theme, .black-theme img {
+    transition: background .4s ease, color .4s ease, filter .4s ease;
+}
+
 /* typing */
 
 @keyframes typing {
@@ -67,12 +73,6 @@
 .fade-begin {
     opacity: 1;
     transform: translate3d(0,0,0);
-}
-
-/* black/white theme */
-
-.cropo, p, h1, .habilidades, .sobre-mim, .parallax-noscroll, .port, .black-theme, .black-theme img {
-    transition: background .4s ease, color .4s ease, filter .4s ease;
 }
 
 /* ============================
@@ -119,8 +119,6 @@ header {
     height: 15vh;
     font-size: 4vh;
 }
-
-header ul {width: 100%}
 
 header ul, header ul li {
     list-style: none;
