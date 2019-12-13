@@ -120,17 +120,17 @@ header {
     font-size: 4vh;
 }
 
-header ul {
-	width: auto;
-	margin: auto;
-}
-
 header ul, header ul li {
     list-style: none;
     display: inline-block;
     padding: 0 20px;
     height: 15vh;
     transition: background 0.1s ease;
+}
+
+header ul {
+	width: auto;
+	margin: auto;
 }
 
 header ul li {
@@ -541,8 +541,8 @@ footer {
 ========= "mobile" =========== 
 ============================ */
 
-@media (max-width: 800px) {
-    #titleH {margin: 1vh 0;}
+@media screen and (max-width: 800px) {
+	#titleH {margin: 1vh 0;}
 
     .banner {height: 100px;}
 
