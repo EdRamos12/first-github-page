@@ -20,7 +20,7 @@ if (!localStorage.isWhite) {
 themeInfo = localStorage.isWhite;
 darkModePallette = '#121212';
 
-function setTheme() {
+function setTheme(pallette) {
     var cropo = document.querySelector('.cropo'),
         port = document.querySelectorAll('.port'),
         btntheme = document.querySelector('.black-theme span'),
@@ -33,11 +33,11 @@ function setTheme() {
 
     if (localStorage.isWhite == 'no') {
         // section background
-        cropo.style.background = darkModePallette;
+        cropo.style.background = pallette;
         // triangle colors
-        habilidades.style.color = darkModePallette;
-        sobremim.style.color = darkModePallette;
-        noscroll.style.color = darkModePallette;
+        habilidades.style.color = pallette;
+        sobremim.style.color = pallette;
+        noscroll.style.color = pallette;
         // btn set theme
         btnimg.style.webkitFilter = 'invert(100%)';
         btntheme.innerHTML = 'Desligar tema escuro';
@@ -48,7 +48,7 @@ function setTheme() {
         // form
         noscroll.style.backgroundImage = 'url("img/bg.jpg")';
         // port
-        port.forEach(e => { e.style.background = darkModePallette; e.style.color = 'white'; });
+        port.forEach(e => { e.style.background = pallette; e.style.color = 'white'; });
     } else {
         cropo.style.background = 'white';
         // btn set theme
@@ -71,7 +71,7 @@ function setTheme() {
     }
 }
 
-setTheme();
+setTheme(darkModePallette);
 
 function blackify() {
     if (localStorage.isWhite == 'yes') {
@@ -80,7 +80,7 @@ function blackify() {
         localStorage.setItem('isWhite', 'yes');
     }
     themeInfo = localStorage.isWhite;
-    setTheme();
+    setTheme(darkModePallette);
 }
 
 /* =======================================
@@ -116,6 +116,7 @@ function enviar() {
         fname.classList.add("form-error");
         return false;
     }
+
     if (femail.value.length > 5 && femail.includes("@") && femail.includes(".")) {
         eremail.innerHTML = " ";
         femail.classList.remove("form-error");
@@ -124,6 +125,7 @@ function enviar() {
         femail.classList.add("form-error");
         return false;
     }
+    
     if (fmsg.value.length >= 10) {
         ermsg.innerHTML = " ";
         fmsg.classList.remove("form-error");
