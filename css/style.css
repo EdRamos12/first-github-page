@@ -477,7 +477,7 @@ textarea {
     border-radius: 5px;
     resize: vertical;
     outline: none;
-	background: none;
+	background: rgb(0,0,0,.3);
 	color: white;
 }
 
@@ -488,8 +488,8 @@ button[type=submit] {
     cursor: pointer;
     padding: 16px 32px;
     height: 56px;
-    background-color: #408048;
-    border: none;
+    background: rgb(0,0,0,.5);
+    border: 2px white solid;
     color: white;
     font-size: 25px;
     text-align: center;

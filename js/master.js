@@ -29,7 +29,8 @@ function setTheme(pallette) {
         h1 = document.querySelectorAll('h1'),
         habilidades = document.querySelector('.habilidades'),
         sobremim = document.querySelector('.sobre-mim'),
-        noscroll = document.querySelector('.parallax-noscroll');
+        noscroll = document.querySelector('.parallax-noscroll'),
+		githubico = document.querySelector('#github');
 
     if (localStorage.isWhite == 'no') {
         // section background
@@ -49,6 +50,8 @@ function setTheme(pallette) {
         noscroll.style.backgroundImage = 'url("img/bg.jpg")';
         // port
         port.forEach(e => { e.style.background = pallette; e.style.color = 'white'; });
+		// social-media
+		githubico.style.webkitFilter = 'invert(100%)';
     } else {
         cropo.style.background = 'white';
         // btn set theme
@@ -68,6 +71,8 @@ function setTheme(pallette) {
         p.forEach(e => { e.style.color = 'black'; });
         //port backgorund color
         port.forEach(e => { e.style.background = 'white';});
+		// social-media
+		githubico.style.webkitFilter = 'invert(00)';
     }
 }
 
